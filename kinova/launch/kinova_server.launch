@@ -1,0 +1,8 @@
+<launch>
+
+    <!-- parametre -->
+    <arg name="robot_namespace" default="gen3_lite" />
+
+    <!-- launch turtbo script -->
+    <node name='kinova_action_server' pkg='kinova' type='action_server.py' ns="$(arg robot_namespace)" output="screen" />
+</launch>

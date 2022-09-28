@@ -1,0 +1,11 @@
+#goal         
+int64 vagon_type
+string name 
+int64 gun_state
+float64 gripper_range
+---
+#result
+int64 count
+---
+#feedback
+float64 joint_info
