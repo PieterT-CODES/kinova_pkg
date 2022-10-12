@@ -1,8 +1,8 @@
          
 int64 vagon_type
-string name 
-int64 gun_state
 float64 gripper_range
+string seat_sequence_type
+int64 index
 ---
 #result
 string result

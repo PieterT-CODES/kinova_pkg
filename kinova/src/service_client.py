@@ -11,10 +11,10 @@ class KinovaServiceClient():
         self.service = rospy.ServiceProxy('/kinova_service_server', sequence)        
         self.object = sequenceRequest()
 
-    def send_goal(self, vagon_type, name, gun_state, gripper_range):
+    def send_goal(self, vagon_type, seat_sequence_type, index, gripper_range):
         self.object.vagon_type = vagon_type #int 
-        self.object.name = name #string
-        self.object.gun_state = gun_state #int
+        self.object.seat_sequence_type = seat_sequence_type #string
+        self.object.index = index #int
         self.object.gripper_range = gripper_range #float
 
         rospy.loginfo(self.object.vagon_type)
@@ -26,4 +26,4 @@ class KinovaServiceClient():
 
 if __name__ == "__main__":
     kinovaserviceclient = KinovaServiceClient()
-    kinovaserviceclient.send_goal(1, "hello world", 1, 0.5)
+    kinovaserviceclient.send_goal(1, "middle", 4, 0.5)
