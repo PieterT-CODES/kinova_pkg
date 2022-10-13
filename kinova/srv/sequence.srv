@@ -1,6 +1,5 @@
          
 int64 vagon_type
-float64 gripper_range
 string seat_sequence_type
 int64 index
 ---

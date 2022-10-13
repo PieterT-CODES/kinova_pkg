@@ -24,13 +24,11 @@ class KinovaService():
         self.vagon_type = request.vagon_type #int
         self.seat_sequence_type = request.seat_sequence_type #string
         self.index = request.index #int
-        self.gripper_range = request.gripper_range #float
         response = ''
 
         rospy.loginfo("Vagon Type: ",self.vagon_type)
         rospy.loginfo("Seat Sequence Type: ",self.seat_sequence_type)
         rospy.loginfo("Index: ",self.index)
-        rospy.loginfo("Gripper Range: " ,self.gripper_range)
                 
         if self.vagon_type == VagonType.AMPEER.value: 
             ampeer_list = self.kinova.get_ampeer_list(self.seat_sequence_type)

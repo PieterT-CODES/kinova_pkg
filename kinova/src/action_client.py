@@ -13,11 +13,10 @@ class KinovaActionClient():
         self.goal = SequenceGoal()
 
 
-    def send_goals(self, vagon_type, seat_sequence_type, index, gripper_range): 
+    def send_goals(self, vagon_type, seat_sequence_type, index): 
         goal.vagon_type = vagon_type
         goal.seat_sequence_type = seat_sequence_type 
         goal.index = index
-        goal.gripper_range = gripper_range
 
         client.send_goal(goal)
         client.wait_for_result() 
@@ -26,5 +25,5 @@ class KinovaActionClient():
 
 if __name__ == '__main__': 
     kinova_action_client = KinovaActionClient()
-    kinova_action_client.send_goals(1, "middle", 4, 0.5)
+    kinova_action_client.send_goals(1, "middle", 4)
 

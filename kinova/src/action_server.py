@@ -31,7 +31,6 @@ class KinovaActionServer(object):
         self.vagon_type = goal.vagon_type #int
         self.seat_sequence_type = request.seat_sequence_type #string
         self.index = request.index #int
-        self.gripper_range = request.gripper_range #float
 
         if self.vagon_type == VagonType.AMPEER.value:
             ampeer_list = self.kinova.get_ampeer_list(self.seat_sequence_type)
